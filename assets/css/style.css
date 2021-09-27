@@ -659,6 +659,12 @@ img.topic__avatar-img-3{
     flex-direction: column;
 }
 
+.grade__blank{
+    background-color: #ededed;
+    border: 1px solid var(--border-color);
+    height: 300px;
+}
+
 .grade__body--active{
     display: flex;
 }
