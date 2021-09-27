@@ -7,6 +7,7 @@
     <title>Nguyen Chi Lap</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/animation.css">
     <link rel="stylesheet" href="./assets/font/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -113,8 +114,14 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="nav__item nav__item-mapping">
+                            <a href="#" class="nav__item-link">
+                                <span class="nav__item-text">Grades</span>
+                            </a>
+                        </li>
                     </ul>
                 </ul>
+
 
                 <!-- INFO NAV -->
                 <ul class="nav__item-list">
@@ -165,5 +172,332 @@
             </li>
         </ul>
     </div>
+
+     <!-- REACTION -->
+     <div id="toast">
+    </div>
+
+    <div class="reaction">
+        <div class="reaction__btn-wrap">
+            <button onclick="showLoveToast();" class="reaction__btn btn">
+                <i class="reaction__btn-icon reaction__btn--love fab fa-gratipay"></i>
+            </button>
+            <button onclick="showLikeToast();" class="reaction__btn btn">
+                <i class="reaction__btn-icon reaction__btn--like fas fa-thumbs-up"></i>
+            </button>
+            <button onclick="showAngryToast();" class="reaction__btn btn">
+                <i class="reaction__btn-icon reaction__btn--angry fas fa-angry"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- CONTAINER -->
+    <div class="container">
+        <div class="grid">
+            <div id="grade" class="grid__row">
+                 <!-- GRADE FILTERING -->
+                 <div class="grid__column-2">
+                    <div class="filter">
+                        <h3 class="filter__heading">Section</h3>
+                        <ul class="filter__list">
+                            <li class="filter__grade filter__item filter__item--active">
+                                Freshman
+                            </li>
+                            <li class="filter__grade filter__item">
+                                Somophore
+                            </li>
+                            <li class="filter__grade filter__item">
+                                Junior
+                            </li>
+                            <li class="filter__grade filter__item">
+                                Senior
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- GRADES TITLE -->
+                <div class="grid__column-10">
+                    <div class="grid__row">
+                        <h2 class="grade__title container__title container__title--active">(2018 - 2019)</h2>
+                        <h2 class="grade__title container__title">(2019 - 2020)</h2>
+                        <h2 class="grade__title container__title">(2020 - 2021)</h2>
+                        <h2 class="grade__title container__title">(2021 - 2022)</h2>
+                    </div>
+                    <!-- GRADES -->
+                    <div class="container__wrapper">
+                        <!-- SEMESTER -->
+                        <div class="tab__wrapper grid__row">
+                            <div class="grid__column-1-2">
+                                <h2 class="tab-semester tab__title tab--active">Semester 1</h2>
+                            </div>
+                            <div class="grid__column-1-2">
+                                <h2 class="tab-semester tab__title">Semester 2</h2>
+                            </div>
+                        </div>
+
+                        <!-- GRADE DETAILS -->
+                        <div class="grade__wrapper">
+                            <div class="grade__header">
+                                <div class="grade__item-column grade__item-column-1">Môn học</div>
+                                <div class="grade__item-column grade__item-column-2">Số tín chỉ</div>
+                                <div class="grade__item-column grade__item-column-3">Điểm</div>
+                            </div>
+
+                            <div class="grade-1-1 grade__body grade__body--active">
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">BAA00011 - Anh văn 1</div>
+                                    <div class="grade__item-column grade__item-column-2">0</div>
+                                    <div class="grade__item-column grade__item-column-3">8.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">BAA00012 - Anh văn 2</div>
+                                    <div class="grade__item-column grade__item-column-2">0</div>
+                                    <div class="grade__item-column grade__item-column-3">7.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">BAA00030 - Giáo dục quốc phòng</div>
+                                    <div class="grade__item-column grade__item-column-2">1</div>
+                                    <div class="grade__item-column grade__item-column-3">8.50</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">CSC00001 - Nhập môn Công nghệ Thông tin 1</div>
+                                    <div class="grade__item-column grade__item-column-2">3</div>
+                                    <div class="grade__item-column grade__item-column-3">8.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">ADD00002 - Nhập môn đầu khóa</div>
+                                    <div class="grade__item-column grade__item-column-2">1</div>
+                                    <div class="grade__item-column grade__item-column-3">0.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">CSC10001 - Nhập môn lập trình</div>
+                                    <div class="grade__item-column grade__item-column-2">4</div>
+                                    <div class="grade__item-column grade__item-column-3">7.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">BAA00004 - Pháp luật đại cương</div>
+                                    <div class="grade__item-column grade__item-column-2">3</div>
+                                    <div class="grade__item-column grade__item-column-3">7.50</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">BAA00021 - Thể dục 1</div>
+                                    <div class="grade__item-column grade__item-column-2">2</div>
+                                    <div class="grade__item-column grade__item-column-3">7.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">MTH00086 - Thực hành toán rời rạc</div>
+                                    <div class="grade__item-column grade__item-column-2">1</div>
+                                    <div class="grade__item-column grade__item-column-3">7.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">MTH00081 - Thực hành vi tích phân 1B</div>
+                                    <div class="grade__item-column grade__item-column-2">1</div>
+                                    <div class="grade__item-column grade__item-column-3">7.50</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">MTH00041 - Toán rời rạc</div>
+                                    <div class="grade__item-column grade__item-column-2">3</div>
+                                    <div class="grade__item-column grade__item-column-3">7.50</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">MTH00003 - Vi tích phân 1B</div>
+                                    <div class="grade__item-column grade__item-column-2">3</div>
+                                    <div class="grade__item-column grade__item-column-3">7.50</div>
+                                </div>
+                                <div class="grade__footer">
+                                    <div class="grade__item-column grade__item-column-1">Tổng tín chỉ / Điểm trung bình</div>
+                                    <div class="grade__item-column grade__item-column-2">20</div>
+                                    <div class="grade__item-column grade__item-column-3">7.50</div>
+                                </div>
+                            </div>
+
+                            <div class="grade-1-2 grade__body">
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">MTH00030 - Đại số tuyến tính</div>
+                                    <div class="grade__item-column grade__item-column-2">3</div>
+                                    <div class="grade__item-column grade__item-column-3">7.50</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">CSC10002 - Kỹ thuật lập trình</div>
+                                    <div class="grade__item-column grade__item-column-2">4</div>
+                                    <div class="grade__item-column grade__item-column-3">7.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">CSC00002 - Nhập môn CNTT 2</div>
+                                    <div class="grade__item-column grade__item-column-2">3</div>
+                                    <div class="grade__item-column grade__item-column-3">8.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">BAA00022 - Thể dục 2</div>
+                                    <div class="grade__item-column grade__item-column-2">2</div>
+                                    <div class="grade__item-column grade__item-column-3">5.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">MTH00083 - Thực hành Đại số tuyến tính</div>
+                                    <div class="grade__item-column grade__item-column-2">1</div>
+                                    <div class="grade__item-column grade__item-column-3">6.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">MTH00082 - Thực hành Vi tích phân 2B</div>
+                                    <div class="grade__item-column grade__item-column-2">1</div>
+                                    <div class="grade__item-column grade__item-column-3">8.50</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">PHY00001 - Vật l‎‎ý đại cương 1 (Cơ - Nhiệt)</div>
+                                    <div class="grade__item-column grade__item-column-2">3</div>
+                                    <div class="grade__item-column grade__item-column-3">6.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">MTH00004 - Vi tích phân 2B</div>
+                                    <div class="grade__item-column grade__item-column-2">3</div>
+                                    <div class="grade__item-column grade__item-column-3">7.00</div>
+                                </div>
+                                <div class="grade__footer">
+                                    <div class="grade__item-column grade__item-column-1">Tổng tín chỉ / Điểm trung bình</div>
+                                    <div class="grade__item-column grade__item-column-2">20</div>
+                                    <div class="grade__item-column grade__item-column-3">6.875</div>
+                                </div>
+                            </div>
+
+                            <div class="grade-2-1 grade__body">
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">BAA00013 - Anh văn 3</div>
+                                    <div class="grade__item-column grade__item-column-2">3</div>
+                                    <div class="grade__item-column grade__item-column-3">7</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">CSC10004 - Cấu trúc dữ liệu và giải thuật</div>
+                                    <div class="grade__item-column grade__item-column-2">4</div>
+                                    <div class="grade__item-column grade__item-column-3">8.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">BAA00002 - Đường lối cách mạng của Đảng Cộng sản Việt Nam</div>
+                                    <div class="grade__item-column grade__item-column-2">3</div>
+                                    <div class="grade__item-column grade__item-column-3">8.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">BAA00005 - Kinh tế đại cương</div>
+                                    <div class="grade__item-column grade__item-column-2">2</div>
+                                    <div class="grade__item-column grade__item-column-3">5.50</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">CSC10003 - Phương pháp lập trình hướng đối tượng</div>
+                                    <div class="grade__item-column grade__item-column-2">4</div>
+                                    <div class="grade__item-column grade__item-column-3">6.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">MTH00085 - Thực hành xác suất thống kê</div>
+                                    <div class="grade__item-column grade__item-column-2">1</div>
+                                    <div class="grade__item-column grade__item-column-3">7.0</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">PHY00002 - Vật l‎‎ý đại cương 2 (Điện từ - Quang)</div>
+                                    <div class="grade__item-column grade__item-column-2">3</div>
+                                    <div class="grade__item-column grade__item-column-3">6.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">MTH00040 - Xác suất thống kê</div>
+                                    <div class="grade__item-column grade__item-column-2">3</div>
+                                    <div class="grade__item-column grade__item-column-3">7.50</div>
+                                </div>
+                                <div class="grade__footer">
+                                    <div class="grade__item-column grade__item-column-1">Tổng tín chỉ / Điểm trung bình</div>
+                                    <div class="grade__item-column grade__item-column-2">23</div>
+                                    <div class="grade__item-column grade__item-column-3">6.875</div>
+                                </div>
+                            </div>
+
+                            <div class="grade-2-2 grade__body">
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">BAA00014 - Anh văn 4</div>
+                                    <div class="grade__item-column grade__item-column-2">3</div>
+                                    <div class="grade__item-column grade__item-column-3">6.5</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">CSC10006 - Cơ sở dữ liệu</div>
+                                    <div class="grade__item-column grade__item-column-2">4</div>
+                                    <div class="grade__item-column grade__item-column-3">7.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">CSC10005 - Kiến trúc máy tính và hợp ngữ</div>
+                                    <div class="grade__item-column grade__item-column-2">4</div>
+                                    <div class="grade__item-column grade__item-column-3">6.50</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">CSC10008 - Mạng máy tính</div>
+                                    <div class="grade__item-column grade__item-column-2">4</div>
+                                    <div class="grade__item-column grade__item-column-3">7.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">ENV00001 - Môi trường đại cương</div>
+                                    <div class="grade__item-column grade__item-column-2">2</div>
+                                    <div class="grade__item-column grade__item-column-3">7.50</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">BAA00001 - Những nguyên lý cơ bản của CN Mác-Lênin</div>
+                                    <div class="grade__item-column grade__item-column-2">5</div>
+                                    <div class="grade__item-column grade__item-column-3">7.5</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">BAA00003 - Tư tưởng Hồ Chí Minh</div>
+                                    <div class="grade__item-column grade__item-column-2">2</div>
+                                    <div class="grade__item-column grade__item-column-3">8.00</div>
+                                </div>
+                                <div class="grade__footer">
+                                    <div class="grade__item-column grade__item-column-1">Tổng tín chỉ / Điểm trung bình</div>
+                                    <div class="grade__item-column grade__item-column-2">24</div>
+                                    <div class="grade__item-column grade__item-column-3">7.14</div>
+                                </div>
+                            </div>
+
+                            <div class="grade-3-1 grade__body">
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">CSC12002 - Cơ sở dữ liệu nâng cao</div>
+                                    <div class="grade__item-column grade__item-column-2">4</div>
+                                    <div class="grade__item-column grade__item-column-3">7.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">CSC10007 - Hệ điều hành</div>
+                                    <div class="grade__item-column grade__item-column-2">4</div>
+                                    <div class="grade__item-column grade__item-column-3">8.00</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">CSC12003 - Hệ quản trị cơ sở dữ liệu</div>
+                                    <div class="grade__item-column grade__item-column-2">4</div>
+                                    <div class="grade__item-column grade__item-column-3">6.50</div>
+                                </div>
+                                <div class="grade__item">
+                                    <div class="grade__item-column grade__item-column-1">MTH00050 - Toán học tổ hợp</div>
+                                    <div class="grade__item-column grade__item-column-2">4</div>
+                                    <div class="grade__item-column grade__item-column-3">6.00</div>
+                                </div>
+                                <div class="grade__footer">
+                                    <div class="grade__item-column grade__item-column-1">Tổng tín chỉ / Điểm trung bình</div>
+                                    <div class="grade__item-column grade__item-column-2">20</div>
+                                    <div class="grade__item-column grade__item-column-3">7.1</div>
+                                </div>
+                            </div>
+
+                            <div class="grade-3-2 grade__body">
+                            </div>
+
+                            <div class="grade-4-1 grade__body">
+                            </div>
+
+                            <div class="grade-4-2 grade__body">
+                            </div>
+
+                            <div class="grade-blank grade__body">    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/javascript/main.js"></script>
+    <script src="./assets/javascript/toast.js"></script>
 </body>
 </html>
