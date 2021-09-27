@@ -657,6 +657,8 @@ img.topic__avatar-img-3{
     display: none;
     width: 100%;
     flex-direction: column;
+    will-change: opacity;
+    animation: fadeIn ease 0.3s;
 }
 
 .grade__blank{
