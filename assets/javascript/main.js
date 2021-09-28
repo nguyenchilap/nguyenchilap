@@ -16,10 +16,12 @@ tabSections.forEach((tabSection, index) => {
         $('.filter__grade.filter__item--active').classList.remove('filter__item--active');
         $('.grade__body.grade__body--active').classList.remove('grade__body--active');
         $('.grade__title.container__title--active').classList.remove('container__title--active')
-        
+        $('.tab-semester.tab--active').classList.remove('tab--active');
+
         //add
-        years[index].classList.add('container__title--active');
         $(`.grade-${index+1}-1`)?.classList.add('grade__body--active');
+        $('.tab-semester:first-child').classList.add('tab--active');
+        years[index].classList.add('container__title--active');
         this.classList.add('filter__item--active');
 
         curTabIndex = index + 1;
