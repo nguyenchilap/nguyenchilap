@@ -284,6 +284,7 @@ const $$ = document.querySelectorAll.bind(document);
                     _this.specificCurrentSong(false);
 
                     _this.currentIndex = index;
+                    _this.loadCurrentSong();
                     audio.play();
                 }
             })
