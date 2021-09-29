@@ -119,6 +119,11 @@
                                 <span class="nav__item-text">Grades</span>
                             </a>
                         </li>
+                        <li class="nav__item nav__item-mapping">
+                            <a href="#music" class="nav__item-link">
+                                <span class="nav__item-text">Musics</span>
+                            </a>
+                        </li>
                     </ul>
                 </ul>
 
@@ -177,7 +182,7 @@
      <div id="toast">
     </div>
 
-    <div class="reaction">
+    <div class="reaction grid__row">
         <div class="reaction__btn-wrap">
             <button onclick="showLoveToast();" class="reaction__btn btn">
                 <i class="reaction__btn-icon reaction__btn--love fab fa-gratipay"></i>
@@ -191,7 +196,7 @@
         </div>
     </div>
     
-    <!-- CONTAINER -->
+    <!-- GRADE -->
     <div class="container">
         <div class="grid">
             <div id="grade" class="grid__row">
@@ -488,6 +493,56 @@
                             <div class="grade-4-2 grade__blank grade__body">
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MUSIC -->
+    <div class="container container__change-bg">
+        <div class="grid">
+            <div id="music" class="grid__row">
+                <!-- MUSIC-CURRENT-SONG -->
+                <div class="music__current-song grid__column-4-8">
+                    <div class="current__info">
+                        <div class="current__img"></div>
+                        <h1 class="current__song-name"></h1>
+                        <h3 class="current__song-artist"></h3>
+                    </div>
+
+                    <div class="music__controler">
+                        <div class="btn btn-repeat">
+                            <i class="music__control-icon fas fa-redo-alt"></i>
+                        </div>
+
+                        <div class="btn btn-prev">
+                            <i class="music__control-icon fas fa-fast-backward"></i>
+                        </div>
+
+                        <div class="btn btn-play">
+                            <i class="music__play-icon far fa-pause-circle music__icon-pause"></i>
+                            <i class="music__play-icon far fa-play-circle music__icon-play"></i>
+                        </div>
+
+                        <div class="btn btn-next">
+                            <i class="music__control-icon fas fa-fast-forward"></i>
+                        </div>
+
+                        <div class="btn btn-random">
+                            <i class="music__control-icon fas fa-random"></i>
+                        </div>
+                    </div>
+
+                    <input type="range" id="music-progress" class="progress" value="0" step="1", min="0", max="100">
+
+                    <audio id="audio" src=""></audio>
+                </div>
+
+                <!-- MUSIC-PLAYLIST -->
+                <div class="playlist__wrapper grid__column-7-2">
+                    <div class="playlist__header">Songs</div>
+                    <div class="music__playlist">
                     </div>
                 </div>
             </div>
