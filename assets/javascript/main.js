@@ -122,8 +122,8 @@ const $$ = document.querySelectorAll.bind(document);
             {
                 name: 'Mơ',
                 artist: 'Lil\'Boi',
-                path: '../assets/musics/Mơ.mp3',
-                image: '../assets/img/music-cover/Mơ.jpg',
+                path: '../assets/musics/Mo.mp3',
+                image: '../assets/img/music-cover/Mo.jpg',
                 time: '3:32'
             },
             {
