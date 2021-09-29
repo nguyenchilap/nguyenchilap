@@ -836,6 +836,10 @@ input[type=range]::-webkit-slider-thumb:hover{
     color: #940808;
 }
 
+.song__heart.active{
+    color: 	#ff0000;
+}
+
 /* PLAYLIST */
   
 .music__playlist{

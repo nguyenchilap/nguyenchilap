@@ -61,6 +61,8 @@ const $$ = document.querySelectorAll.bind(document);
     const progressTimeCount = $('.progress_time-count');
 
     var playList;
+    var heartList;
+    var heartCheckList;
 
     const app = {
         currentIndex: 0,
@@ -245,16 +247,6 @@ const $$ = document.querySelectorAll.bind(document);
                 audio.play();
             }
 
-            //Select Song
-            playList.forEach( (songItem, index) => {
-                songItem.onclick = function(){
-                    _this.specificCurrentSong(false);
-
-                    _this.currentIndex = index;
-                    audio.play();
-                }
-            })
-
             //Random On/Off
             randomBtn.onclick = function(){
                 _this.isRandom = !_this.isRandom
@@ -281,6 +273,24 @@ const $$ = document.querySelectorAll.bind(document);
                 }
                 audio.play();
             }
+
+            //Select Song
+            playList.forEach( (songItem, index) => {
+                songItem.onclick = function(){
+                    _this.specificCurrentSong(false);
+
+                    _this.currentIndex = index;
+                    audio.play();
+                }
+            })
+
+            //Like Song
+            heartList.forEach( (heartItem, index) => {
+                heartItem.onclick = function(){
+                    heartCheckList[index] = !heartCheckList[index];
+                    heartList[index].classList.toggle('active', heartCheckList[index]);
+                }
+            })
         },
         render: function(){
             html = this.songs.map(song => {
@@ -304,6 +314,8 @@ const $$ = document.querySelectorAll.bind(document);
             $('.music__playlist').innerHTML += html.join('');
             
             playList = $$('.song__item');
+            heartList = $$('.song__heart');
+            heartCheckList = new Array(heartList.length).fill(false);
         },
 
         loadCurrentSong: function(){
