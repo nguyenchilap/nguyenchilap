@@ -211,7 +211,8 @@ const $$ = document.querySelectorAll.bind(document);
                     const percent = (audio.currentTime / audio.duration * 100);
                     progress.value = percent;
                     
-                    progressTimeCount.style.left = `calc(${Math.floor(percent)}% - 12px)`;
+                    // progressTimeCount.style.left = `calc(${Math.floor(percent)}% - 2.5%)`;
+                    progressTimeCount.style.left = `calc(${percent - 2.5}%`;
                     _this.getTimeCurrent(audio.duration * percent / 100);
                 }
             }
@@ -233,6 +234,7 @@ const $$ = document.querySelectorAll.bind(document);
                 else
                     _this.nextSong();
                 audio.play();
+                _this.scrollToActiveSong();
             }
 
             //Prev Song
@@ -245,6 +247,7 @@ const $$ = document.querySelectorAll.bind(document);
                 else
                     _this.prevSong();
                 audio.play();
+                _this.scrollToActiveSong();
             }
 
             //Random On/Off
@@ -272,6 +275,7 @@ const $$ = document.querySelectorAll.bind(document);
                     _this.autoNextSong();
                 }
                 audio.play();
+                scrollToActiveSong();
             }
 
             //Select Song
@@ -379,6 +383,15 @@ const $$ = document.querySelectorAll.bind(document);
                 playList[this.currentIndex].style.borderRadius = null;
             }
         },
+
+        scrollToActiveSong: function(){
+            setTimeout(() => {
+                playList[this.currentIndex].scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest'
+                })
+            }, 300)
+        },  
 
         start: function(){
             //render
