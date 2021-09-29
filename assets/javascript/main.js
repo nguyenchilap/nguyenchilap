@@ -73,92 +73,92 @@ const $$ = document.querySelectorAll.bind(document);
             {
                 name: '202020',
                 artist: 'Lil\'Boi',
-                path: '../assets/musics/202020.mp3',
-                image: '../assets/img/music-cover/202020.jpg',
+                path: './assets/musics/202020.mp3',
+                image: './assets/img/music-cover/202020.jpg',
                 time: '3:36'
             },
             {
                 name: 'Covid Days',
                 artist: 'Lil\'Boi',
-                path: '../assets/musics/CovidDays.mp3',
-                image: '../assets/img/music-cover/CovidDays.jpg',
+                path: './assets/musics/CovidDays.mp3',
+                image: './assets/img/music-cover/CovidDays.jpg',
                 time: '2.26'
             },
             {
                 name: 'Dành Cho Em',
                 artist: 'Lil\'Boi',
-                path: '../assets/musics/DanhChoEm.mp3',
-                image: '../assets/img/music-cover/DanhChoEm.jpg',
+                path: './assets/musics/DanhChoEm.mp3',
+                image: './assets/img/music-cover/DanhChoEm.jpg',
                 time: '3:22'
             },
             {
                 name: 'Eyes-Nose-Lips',
                 artist: 'Lil\'Boi',
-                path: '../assets/musics/EyesNoseLips.mp3',
-                image: '../assets/img/music-cover/EyesNoseLips.jpg',
+                path: './assets/musics/EyesNoseLips.mp3',
+                image: './assets/img/music-cover/EyesNoseLips.jpg',
                 time: '3:50'
             },
             {
                 name: 'Mùa Thu Trở Lại (FallBack)',
                 artist: 'Lil\'Boi',
-                path: '../assets/musics/FallBack.mp3',
-                image: '../assets/img/music-cover/FallBack.jpg',
+                path: './assets/musics/FallBack.mp3',
+                image: './assets/img/music-cover/FallBack.jpg',
                 time: '3:05'
             },
             {
                 name: 'Cây Đá Trên Sao (FallBack2)',
                 artist: 'Lil\'Boi',
-                path: '../assets/musics/FallBack2.mp3',
-                image: '../assets/img/music-cover/FallBack2.jpg',
+                path: './assets/musics/FallBack2.mp3',
+                image: './assets/img/music-cover/FallBack2.jpg',
                 time: '3:27'
             },
             {
                 name: 'Gió Nàng Bân',
                 artist: 'Lil\'Boi',
-                path: '../assets/musics/GioNangBan.mp3',
-                image: '../assets/img/music-cover/GioNangBan.jpg',
+                path: './assets/musics/GioNangBan.mp3',
+                image: './assets/img/music-cover/GioNangBan.jpg',
                 time: '3:34'
             },
             {
                 name: 'Mơ',
                 artist: 'Lil\'Boi',
-                path: '../assets/musics/Mo.mp3',
-                image: '../assets/img/music-cover/Mo.jpg',
+                path: './assets/musics/Mo.mp3',
+                image: './assets/img/music-cover/Mo.jpg',
                 time: '3:32'
             },
             {
                 name: 'Người Bạn 4 Chân',
                 artist: 'Lil\'Boi',
-                path: '../assets/musics/NguoiBan4Chan.mp3',
-                image: '../assets/img/music-cover/NguoiBan4Chan.jpg',
+                path: './assets/musics/NguoiBan4Chan.mp3',
+                image: './assets/img/music-cover/NguoiBan4Chan.jpg',
                 time: '4:05'
             },
             {
                 name: 'Rap Til\' Last',
                 artist: 'Lil\'Boi',
-                path: '../assets/musics/RapTilLast.mp3',
-                image: '../assets/img/music-cover/RapTilLast.jpg',
+                path: './assets/musics/RapTilLast.mp3',
+                image: './assets/img/music-cover/RapTilLast.jpg',
                 time: '3:41'
             },
             {
                 name: 'Thuốc Lá và Cà Phê',
                 artist: 'Lil\'Boi',
-                path: '../assets/musics/ThuocLaCf.mp3',
-                image: '../assets/img/music-cover/ThuocLaCf.jpg',
+                path: './assets/musics/ThuocLaCf.mp3',
+                image: './assets/img/music-cover/ThuocLaCf.jpg',
                 time: '2.54'
             },
             {
                 name: 'Về Phía Sau',
                 artist: 'Lil\'Boi',
-                path: '../assets/musics/VePhiaSau.mp3',
-                image: '../assets/img/music-cover/VePhiaSau.jpg',
+                path: './assets/musics/VePhiaSau.mp3',
+                image: './assets/img/music-cover/VePhiaSau.jpg',
                 time: '2.59'
             },
             {
                 name: 'Về Phía Trước',
                 artist: 'Lil\'Boi',
-                path: '../assets/musics/VePhiaTruoc.mp3',
-                image: '../assets/img/music-cover/VePhiaTruoc.jpg',
+                path: './assets/musics/VePhiaTruoc.mp3',
+                image: './assets/img/music-cover/VePhiaTruoc.jpg',
                 time: '3:09'
             },
         ],
