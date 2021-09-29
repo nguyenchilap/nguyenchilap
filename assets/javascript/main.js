@@ -53,16 +53,20 @@ const $$ = document.querySelectorAll.bind(document);
     const nextBtn = $('.btn-next');
     const prevBtn = $('.btn-prev');
     const randomBtn = $('.btn-random');
+    const repeatBtn = $('.btn-repeat');
 
     const currentSong = $('.music__current-song');
     const currentImg = $('.current__img');
     const progress = $('.progress');
+    const progressTimeCount = $('.progress_time-count');
 
     var playList;
 
     const app = {
         currentIndex: 0,
         isPlaying: false,
+        isRandom: false,
+        isRepeat: false,
         songs: [
             {
                 name: '202020',
@@ -173,7 +177,7 @@ const $$ = document.querySelectorAll.bind(document);
                 { transform: 'rotate(360deg)'}
             ], {
                 duration: 30000, //10sec
-                interations: Infinity 
+                interations: Infinity
             })
 
             currentImgAnimate.pause();
@@ -204,6 +208,9 @@ const $$ = document.querySelectorAll.bind(document);
                 if(audio.duration){
                     const percent = (audio.currentTime / audio.duration * 100);
                     progress.value = percent;
+                    
+                    progressTimeCount.style.left = `calc(${Math.floor(percent)}% - 12px)`;
+                    _this.getTimeCurrent(audio.duration * percent / 100);
                 }
             }
 
@@ -211,14 +218,18 @@ const $$ = document.querySelectorAll.bind(document);
             progress.onchange = function(e){
                 const seekTime = audio.duration * e.target.value / 100;
                 audio.currentTime = seekTime; 
+                _this.getTimeCurrent(seekTime);
             }
 
             //Next Song
             nextBtn.onclick = function(){
                 _this.specificCurrentSong(false);
-
-                _this.nextSong();
-                _this.loadCurrentSong();
+                
+                if(_this.isRandom){
+                    _this.randomSong();
+                }
+                else
+                    _this.nextSong();
                 audio.play();
             }
 
@@ -226,8 +237,11 @@ const $$ = document.querySelectorAll.bind(document);
             prevBtn.onclick = function(){
                 _this.specificCurrentSong(false);
 
-                _this.prevSong();
-                _this.loadCurrentSong();
+                if(_this.isRandom){
+                    _this.randomSong();
+                }
+                else
+                    _this.prevSong();
                 audio.play();
             }
 
@@ -237,16 +251,34 @@ const $$ = document.querySelectorAll.bind(document);
                     _this.specificCurrentSong(false);
 
                     _this.currentIndex = index;
-                    _this.loadCurrentSong();
                     audio.play();
                 }
             })
 
-            //Random Song
+            //Random On/Off
             randomBtn.onclick = function(){
+                _this.isRandom = !_this.isRandom
+                randomBtn.classList.toggle('active', _this.isRandom);
+            }
+            
+            //Repeat On/Off
+            repeatBtn.onclick = function(){
+                _this.isRepeat = !_this.isRepeat
+                repeatBtn.classList.toggle('active', _this.isRepeat);
+            }
+
+            //When ended
+            audio.onended = function(){
                 _this.specificCurrentSong(false);
-                _this.randomSong();
-                _this.loadCurrentSong();
+                if (_this.isRepeat){
+                    _this.loadCurrentSong();
+                }
+                else if (_this.isRandom){
+                    _this.randomSong();
+                }
+                else{
+                    _this.autoNextSong();
+                }
                 audio.play();
             }
         },
@@ -287,21 +319,42 @@ const $$ = document.querySelectorAll.bind(document);
             if (this.currentIndex < this.songs.length-1)
                 this.currentIndex++;
             else this.currentIndex = 0;
+            this.loadCurrentSong();
         },
 
         prevSong: function(){
             if (this.currentIndex > 0)
                 this.currentIndex--;
             else this.currentIndex = this.songs.length - 1;
+            this.loadCurrentSong();
         },
 
         randomSong: function(){
             let ranIndex = 0
             do {
                 ranIndex = Math.floor(Math.random() * this.songs.length-1);
-            } while(ranIndex == this.currentIndex || ranIndex < 0);
-            console.log(ranIndex);
+            } while(ranIndex === this.currentIndex || ranIndex < 0);
             this.currentIndex = ranIndex;
+            this.loadCurrentSong();
+        },
+
+        autoNextSong: function(){
+            if (this.currentIndex < this.songs.length - 1)
+                this.currentIndex += 1;
+            else
+                this.currentIndex += 0;
+            this.loadCurrentSong();
+        },
+
+        getTimeCurrent: function(seconds){
+            let TimeCountMinute = progressTimeCount.querySelector('.time-count__mins');
+            let TimeCountSecond = progressTimeCount.querySelector('.time-count__secs');
+
+            mins = Math.floor(seconds / 60);
+            secs = Math.floor(seconds % 60);
+
+            mins < 10 ? TimeCountMinute.textContent = `0${mins}`: TimeCountMinute.textContent = `${mins}`;
+            secs < 10 ? TimeCountSecond.textContent = `0${secs}`: TimeCountSecond.textContent = `${secs}`;
         },
 
         specificCurrentSong: function(specific){

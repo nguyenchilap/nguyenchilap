@@ -749,16 +749,67 @@ img.topic__avatar-img-3{
 .progress{
     -webkit-appearance: none;
     margin: 0 0 24px;
-    width: 65%;
+    width: 100%;
     background: #645446;
     opacity: 0.6;
-    height: 0.4rem;
+    height: var(--progress-height);
     outline: none;
 }
 
 .progress:hover,
 .progress:active{
     opacity: 1;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;;
+    height: var(--progress-height);
+    width: 0.8rem;
+    border-radius: 0;
+    background: var(--primary-color);
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb:hover{
+    --size: 1.6rem;
+    height: var(--size);
+    width: var(--size);
+    border-radius: 50%;
+}   
+
+.progress__wrapper:hover .progress_time-count{
+    display: flex;
+}
+
+.progress__wrapper{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.progress_time-count{
+    display: none;
+    position: absolute;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 1rem;
+    padding: 4px;
+    border-radius: 4px;
+    top: calc(var(--progress-height) + 10px);
+    left: -12px;
+    will-change: opacity;
+    animation: fadeIn ease 0.5s;
+}
+
+.progress_time-count::before{
+    content: "";
+    position: absolute;
+    top: calc(var(--progress-height) + -15px);
+    left: 32%;
+    border-color: transparent transparent var(--primary-color) transparent;
+    border-style: solid;
+    border-width: 6px 6px;
 }
 
 .music__control-icon{
@@ -780,22 +831,10 @@ img.topic__avatar-img-3{
     color: #645446;
 }
 
-input[type=range]::-webkit-slider-thumb {
-    --size: 0.4rem;
-    -webkit-appearance: none;;
-    height: var(--size);
-    width: 0.8rem;
-    border-radius: 0;
-    background: var(--primary-color);
-    cursor: pointer;
+.btn-repeat.active .music__control-icon,
+.btn-random.active .music__control-icon{
+    color: #940808;
 }
-
-input[type=range]::-webkit-slider-thumb:hover{
-    --size: 1.6rem;
-    width: var(--size);
-    border-radius: 50%;
-}   
-
 
 /* PLAYLIST */
   
