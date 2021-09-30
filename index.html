@@ -176,6 +176,19 @@
                 <a href="tel:+84 901161641">+84 901161641</a>
             </li>
         </ul>
+
+        <div class="topic__sound">
+            <div class="topic__sound-img"
+            style = "background-image: url(./assets/img/music-cover/MuaThuChoEm.jpg);">
+                <div class="btn topic__sound-control">
+                    <i class="far fa-pause-circle topic__sound-icon--pause"></i>
+                    <i class="far fa-play-circle topic__sound-icon--play"></i>
+                </div>
+            </div>
+            <div class="topic__sound-name">Mùa Thu Cho Em</div>
+
+            <audio src="./assets/musics/MuaThuChoEm.mp3" class="topic__sound-audio"></audio>
+        </div>
     </div>
 
      <!-- REACTION -->
@@ -510,10 +523,19 @@
             <div id="music" class="grid__row">
                 <!-- MUSIC-CURRENT-SONG -->
                 <div class="music__current-song grid__column-4-8">
-                    <div class="current__info">
-                        <div class="current__img"></div>
-                        <h1 class="current__song-name"></h1>
-                        <h3 class="current__song-artist"></h3>
+                    <div class="current__center">
+                        <!-- <div class="current__volume-controller">
+                            <input type="range" class="volume__progress"
+                               value="50" step="1" min="0" max="100">
+                            <i class="fas fa-volume-up volume__icon"></i>
+                            <div class="volume__value">00</div>
+                        </div> -->
+
+                        <div class="current__info">
+                            <div class="current__img"></div>
+                            <h1 class="current__song-name"></h1>
+                            <h3 class="current__song-artist"></h3>
+                        </div>
                     </div>
 
                     <div class="music__controler">

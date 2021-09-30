@@ -211,7 +211,6 @@ const $$ = document.querySelectorAll.bind(document);
                     const percent = (audio.currentTime / audio.duration * 100);
                     progress.value = percent;
                     
-                    // progressTimeCount.style.left = `calc(${Math.floor(percent)}% - 2.5%)`;
                     progressTimeCount.style.left = `calc(${percent - 2.5}%`;
                     _this.getTimeCurrent(audio.duration * percent / 100);
                 }
@@ -291,9 +290,10 @@ const $$ = document.querySelectorAll.bind(document);
 
             //Like Song
             heartList.forEach( (heartItem, index) => {
-                heartItem.onclick = function(){
+                heartItem.onclick = function(e){
                     heartCheckList[index] = !heartCheckList[index];
                     heartList[index].classList.toggle('active', heartCheckList[index]);
+                    e.stopPropagation();
                 }
             })
         },
@@ -359,7 +359,7 @@ const $$ = document.querySelectorAll.bind(document);
             if (this.currentIndex < this.songs.length - 1)
                 this.currentIndex += 1;
             else
-                this.currentIndex += 0;
+                this.currentIndex = 0;
             this.loadCurrentSong();
         },
 
@@ -406,7 +406,6 @@ const $$ = document.querySelectorAll.bind(document);
 
             //Upload First Song into UI
             this.loadCurrentSong();
-
         }
     }
 

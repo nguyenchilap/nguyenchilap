@@ -75,3 +75,46 @@ function showAngryToast(){
     duration: 2000,
     })
 }
+
+//TOPIC - MUSIC
+{
+    const audio =  $('.topic__sound-audio');
+    const img = $('.topic__sound-img'); 
+    const control = $('.topic__sound-control');
+    const playBtn = $('i.topic__sound-icon--play');
+    const pauseBtn = $('i.topic__sound-icon--pause');
+
+
+    const app = {
+        isPausing: true,
+
+        handleEvent: function(){
+            const _this = this;
+
+            img.onclick = function(){
+                playBtn.style.animation = "fadeOut ease 1s, growthOver ease 1s";
+                pauseBtn.style.animation = "fadeOut ease 1s, growthOver ease 1s";
+                _this.isPausing = !_this.isPausing;
+                _this.checkPlaying();
+
+                control.classList.toggle('pausing', _this.isPausing);
+            }
+        },
+
+        checkPlaying: function(){
+            if(this.isPausing === false) {
+                audio.play();
+                console.log('ok');
+            }
+            else audio.pause();
+        },
+
+        start: function(){
+            audio.loop = true;
+            //Handle Event
+            this.handleEvent();
+        }
+    }
+
+    app.start();
+}
