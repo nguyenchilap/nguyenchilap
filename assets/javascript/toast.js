@@ -120,8 +120,7 @@ function showAngryToast(){
 }
 
 //HEADER-MOBILE-MENU
-
-{
+if (window.innerWidth < 740){
     const mobileMenuBtn = $('.nav__mobile-menu');
     const navMenuList = $('.nav__item-mobile-list');
     const navCloseMobileMenu = $$('.nav__item-close-mobile-menu');
