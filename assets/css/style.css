@@ -25,6 +25,22 @@
     align-items: center;
 }
 
+.nav__mobile-menu{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    height: var(--header-height);
+    width: 50px;
+    font-size: 2.4rem;
+}
+
+/* .nav__mobile-menu:hover {
+    background-color: var(--button-hover-color);
+    color: var(--black-color);
+    display: none;
+} */
+
 .nav__item-list{
     display: flex;
     list-style: none;
@@ -507,6 +523,9 @@ i.topic__sound-icon--play{
 
 /* REACTION */
 .reaction{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
     background-color: #F5F5F5;
 }
 

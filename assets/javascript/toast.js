@@ -118,3 +118,26 @@ function showAngryToast(){
 
     app.start();
 }
+
+//HEADER-MOBILE-MENU
+
+{
+    const mobileMenuBtn = $('.nav__mobile-menu');
+    const navMenuList = $('.nav__item-mobile-list');
+    const navCloseMobileMenu = $$('.nav__item-close-mobile-menu');
+
+    mobileMenuBtn.onclick = function(){
+        this.style.display = 'none';
+
+        navMenuList.style.display = 'flex';
+    }
+
+    navCloseMobileMenu.forEach(item => {
+        item.onclick = function(){
+            navMenuList.style.display = 'none';
+    
+            mobileMenuBtn.style.display = 'flex';
+        }
+    });
+    
+}

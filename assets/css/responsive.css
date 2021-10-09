@@ -1,0 +1,270 @@
+/* PC and Tablet */
+
+@media (min-width: 740px)
+{
+    #mobile-menu-btn{
+        display: none !important;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 1023px) and (min-width: 740px)
+{
+}
+
+/* Mobile */
+
+@media (max-width: 739px)
+{
+    .grid__column-2{
+        width: 20%;
+        padding-left: 10px;
+        padding-right: 8px;
+    }
+
+    .grid__column-10{
+        width: 80%;
+        padding-left: 2px;
+        padding-right: 10px;
+    }
+
+    .grid__column-2-4{
+        width: 50%;
+    }
+
+    /* header */
+    .nav__mobile-menu{
+        display: flex;
+    }
+
+    .nav__item-mobile-list{
+        display: none;
+        flex-direction: column;
+        position: relative;
+        top: calc( 2 * var(--header-height));
+        background-image: linear-gradient(0, #2D2424, #171010);
+        animation: slideInRight ease 0.3s;
+    }
+    
+
+    .nav__item-maps{
+        flex-direction: column;
+    }
+
+    .nav__contact{
+        height: var(--header-height);
+        display: flex;
+        align-items: center;
+    }
+
+    .nav__contact-separate::after{
+        display: none;
+    }
+
+    .nav__item,
+    .nav__item-maps{
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav__edu-list{
+        display: none;
+    }
+
+    .nav__edu:hover .nav__edu-list{
+        transform: none;
+        display: flex;
+    }
+
+    /* CONTACT QR */
+    .nav__contact-wrap{
+        border-radius: 2px;
+        left: 153px;
+        top: -1px;
+        transform-origin: left 20px;
+    }
+
+    .nav__contact-wrap::before{
+        display: none;
+    }
+
+    .nav__qr-code{
+        display: none;
+    }
+    
+    .nav__social-wrap{
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 0;
+        width: 160px;
+    }
+
+    .nav__social{
+        padding: 14px 14px 14px 24px;
+        margin: 0;
+        font-size: 1.4rem;
+        text-align: left;
+    }
+
+    .nav__social-icon-fb{
+        margin-right: 8px;
+    }
+
+    .nav__social-icon-ins{
+        margin-right: 9px;
+        margin-left: 1px;
+    }
+
+    /* NAV EDU */
+
+    .nav__edu-list{
+        top: -202%;
+        left: 100%;
+        border-radius: 2px;
+        z-index: 1;
+        animation: growthUp ease 0.3s;
+        transform-origin: left 50%;
+        transition: none;
+        will-change: opacity, transform;
+    }
+
+    .nav__edu-item{
+        text-align: left;
+    }
+
+    .nav__edu-item-link{
+        padding: 8px 16px 8px 8px;
+    }
+
+    /* filter */
+    .filter__heading{
+        font-size: 1.2rem;
+        padding-left: 8px;
+    }
+
+    .filter__item{
+        padding: 12px 0;
+        margin: 0 10px;
+    }
+
+    .filter__list{
+        font-size: 0.9rem;
+    }
+
+    .filter__item-link{
+        font-size: 1rem;
+    }
+
+    /* container */
+    .container{
+        padding: 80px 0 120px;
+    }
+
+    .container__img{
+        height: 212px;
+    }
+
+    /* topic */
+    img.topic__avatar-img {
+        left: 10%;
+        bottom: -12%;
+        width: 32%;
+        height: 80%;
+        border: 4px solid var(--white-color);
+    }
+
+    .topic__description {
+        bottom: 0;
+        left: 46%;
+        font-size: 1rem;
+    }
+
+    .topic__description-item {
+        padding-top: 4px;
+    }
+
+    .topic__sound{
+        width: unset;
+    }
+
+    .topic__sound-name {
+        font-size: 0.8rem;
+        margin: 0 12px;
+    }
+    
+    /* reaction */
+    .reaction__btn-wrap {
+        position: relative;
+        left: 4%;
+        top: 44px;
+    }
+
+    .reaction__btn-icon{
+        font-size: 6vmin;
+    }
+
+    /* toast */
+    .toast{
+        min-width: 200px;
+        max-width: 250px;
+        padding: 10px 0;
+    }
+    
+    .toast__title{
+        font-size: 1.2rem;
+    }
+    .toast__msg{
+        font-size: 1rem;
+    }
+
+    /* grade */
+    .grade__wrapper{
+    }
+
+    .grade__item-column {
+        font-size: 1.2rem;
+        padding: 12px 12px;
+    }
+
+    .grade__item-column-1{
+        flex: unset;
+        width: 180px;
+    }
+    
+    .grade__item-column-2{
+        flex: 1;
+        width: 20px;
+    }
+
+    .grade__item-column-3{
+        flex: 1;
+        width: unset;
+    }
+
+
+    /* MUSIC */
+    #music{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid__column-4-8,
+    .grid__column-7-2{
+        width: 95%;
+    }
+
+    .song-item{
+        height: 80px;
+    }
+
+    .song__img {
+        width: 10%;
+        margin: 0 8px 0 8px;
+    }
+
+    .song__time {
+        padding: 0 0%;
+    }
+}

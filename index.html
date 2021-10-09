@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nguyen Chi Lap</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/animation.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
     <link rel="stylesheet" href="./assets/font/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
     
@@ -19,13 +22,10 @@
         <div class="grid">
             <!-- NAVIGATION -->
             <div class="header__nav">
-                <ul class="nav__item-list">
+                <ul class="nav__item-list nav__item-mobile-list">
+
                     <li class="nav__item nav__contact nav__contact-separate">
                         <span class="nav__contact-text">Contact with Lap</span>     
-                        <!-- Mobile CONTACT -->
-                        <div class="nav__contact-mobile">
-                            <i class="nav__contact-mobile-icon fab fa-facebook"></i>
-                        </div>
                         
                         <!-- NAV CONTACT -->
                         <div class="nav__contact-wrap">
@@ -47,7 +47,7 @@
                     </li>         
 
                     <ul class="nav__item-maps">
-                        <li class="nav__item nav__item-mapping">
+                        <li class="nav__item nav__item-mapping nav__item-close-mobile-menu">
                             <a href="#" class="nav__item-link">
                                 <span class="nav__item-icon">
                                     <i class="fas fa-home"></i>
@@ -114,12 +114,12 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav__item nav__item-mapping">
+                        <li class="nav__item nav__item-mapping nav__item-close-mobile-menu">
                             <a href="#grade" class="nav__item-link">
                                 <span class="nav__item-text">Grades</span>
                             </a>
                         </li>
-                        <li class="nav__item nav__item-mapping">
+                        <li class="nav__item nav__item-mapping nav__item-close-mobile-menu">
                             <a href="#music" class="nav__item-link">
                                 <span class="nav__item-text">Musics</span>
                             </a>
@@ -127,6 +127,9 @@
                     </ul>
                 </ul>
 
+                <div class="nav__mobile-menu">
+                    <i class="nav__mobile-menu-icon fas fa-bars"></i>
+                </div>
 
                 <!-- INFO NAV -->
                 <ul class="nav__item-list">
@@ -195,7 +198,7 @@
      <div id="toast">
     </div>
 
-    <div class="reaction grid__row">
+    <div class="reaction">
         <div class="reaction__btn-wrap">
             <button onclick="showLoveToast();" class="reaction__btn btn">
                 <i class="reaction__btn-icon reaction__btn--love fab fa-gratipay"></i>
