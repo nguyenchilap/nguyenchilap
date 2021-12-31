@@ -295,10 +295,14 @@ i.nav__edu-item-progess{
 }
 
 .nav__user-avt{
-    height: 30px;
+    height: 34px;
+    width: 34px;
     border-radius: 50px;
     margin-right: 8px;
-    border: 1px solid var(--white-color);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
 }
 
 .nav__user-details{
@@ -403,7 +407,7 @@ i.nav__edu-item-progess{
     padding-top: 40%;
 }
 
-img.topic__avatar-img{
+.topic__avatar-img{
     position: absolute;
     left: 10%;
     bottom: -8%;
@@ -412,21 +416,25 @@ img.topic__avatar-img{
     border: 8px solid var(--white-color);
     border-radius: 50%; 
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: slideInLeft ease-in-out 0.5s;
 }
 
-img.topic__avatar-img-1{
+.topic__avatar-img-1{
     animation-name: avt-1;
     animation-duration: 5s;
     animation-iteration-count: infinite;
 }
 
-img.topic__avatar-img-2{
+.topic__avatar-img-2{
     animation-name: avt-2;
     animation-duration: 5s;
     animation-iteration-count: infinite;
 }
 
-img.topic__avatar-img-3{
+.topic__avatar-img-3{
     animation-name: avt-3;
     animation-duration: 5s;
     animation-iteration-count: infinite;
